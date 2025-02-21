@@ -2,3 +2,7 @@ cursojenkins/
 jenkins/
 da.yml
 template.yaml
+node_modules/
+.env
+*.log
+.DS_Store
