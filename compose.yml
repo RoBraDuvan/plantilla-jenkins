@@ -4,9 +4,6 @@ services:
   jenkins:
     image: jenkins/jenkins:2.487-jdk17
     restart: always
-    build:
-      context: .
-      dockerfile: Dockerfile
     user: jenkins
     privileged: true
     ports:
