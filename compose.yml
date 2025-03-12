@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   jenkins:
-    image: jenkins/jenkins:2.487-jdk17
+    image: jenkins/jenkins:2.501-jdk17
     restart: always
     user: jenkins
     privileged: true
@@ -15,15 +15,15 @@ services:
     networks:
       - jenkins
   
-  sonarqube:
-    image: sonarqube:10.7.0-community
-    restart: always
-    ports: 
-      - 9000:9000
-    volumes:
-      - sonarqube_home:/opt/sonarqube/
-    networks:
-      - jenkins
+  # sonarqube:
+  #   image: sonarqube:10.7.0-community
+  #   restart: always
+  #   ports: 
+  #     - 9000:9000
+  #   volumes:
+  #     - sonarqube_home:/opt/sonarqube/
+  #   networks:
+  #     - jenkins
 
 volumes:
   jenkins_home:
